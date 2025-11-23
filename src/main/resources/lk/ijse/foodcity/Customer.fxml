@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="customerContent" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.foodcity.controller.CustomerController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-1.0" layoutY="-3.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #ffa378;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Management">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutY="45.0" prefHeight="554.0" prefWidth="799.0">
+         <children>
+            <Pane prefHeight="285.0" prefWidth="799.0">
+               <children>
+                  <VBox layoutX="120.0" layoutY="14.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="ID">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idField" onKeyPressed="#handleSearchCustomer" prefHeight="26.0" prefWidth="384.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="121.0" layoutY="77.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="384.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="121.0" layoutY="139.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="Salary">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="salaryField" prefHeight="26.0" prefWidth="384.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="415.0" layoutY="78.0" prefHeight="105.0" prefWidth="261.0">
+                     <children>
+                        <Label text="Address">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="addressField" prefHeight="93.0" prefWidth="261.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="122.0" layoutY="201.0" prefHeight="72.0" prefWidth="556.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleSaveCustomer" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleCustomerUpdate" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleCustomerDelete" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleReset" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: orange;" text="Reset">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="285.0" prefWidth="799.0">
+               <children>
+                  <TableView fx:id="tblCustomer" layoutX="8.0" layoutY="7.0" prefHeight="263.0" prefWidth="784.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="colName" prefWidth="310.41822052001953" text="Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="227.80072021484375" text="Address" />
+                        <TableColumn fx:id="colSalary" prefWidth="168.43084716796875" text="Salary" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

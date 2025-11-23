@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.foodcity.controller.LayoutController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #ffd6c9;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#clickCustomerNav" prefHeight="53.0" prefWidth="173.0" style="-fx-background-color: #ffa378;" text="Customer">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#clickItemNav" prefHeight="53.0" prefWidth="173.0" style="-fx-background-color: #ffa378;" text="Item">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#clickOrderNav" prefHeight="53.0" prefWidth="173.0" style="-fx-background-color: #ffa378;" text="Order">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane fx:id="mainContent" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffeae0;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
