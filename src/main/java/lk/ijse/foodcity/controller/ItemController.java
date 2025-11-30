@@ -177,6 +177,10 @@ public class ItemController implements Initializable {
     
     void cleanFields() {
     
+        idField.setText("");
+        nameField.setText("");
+        qtyField.setText("");
+        
     }
     
     void handleLoadItemTable() {
