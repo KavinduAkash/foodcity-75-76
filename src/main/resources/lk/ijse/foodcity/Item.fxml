@@ -1,15 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.foodcity.controller.ItemController">
    <children>
-      <Text layoutX="314.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ITEM" textAlignment="CENTER" wrappingWidth="189.32095336914062">
-         <font>
-            <Font size="56.0" />
-         </font>
-      </Text>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="809.0" style="-fx-background-color: #ffa378;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Item Management">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="55.0" prefHeight="554.0" prefWidth="799.0">
+         <children>
+            <Pane prefHeight="270.0" prefWidth="780.0">
+               <children>
+                  <VBox layoutX="252.0" layoutY="26.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="ID">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idField" prefHeight="26.0" prefWidth="384.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="252.0" layoutY="88.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="384.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="121.0" layoutY="139.0" prefHeight="40.0" prefWidth="261.0" />
+                  <HBox alignment="CENTER" layoutX="122.0" layoutY="201.0" prefHeight="72.0" prefWidth="556.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleSaveItem" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleUpdateItem" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleDeleteItem" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleResetItem" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: orange;" text="Reset">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label layoutX="252.0" layoutY="152.0" text="QTY">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="qtyField" layoutX="252.0" layoutY="178.0" prefHeight="26.0" prefWidth="261.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="285.0" prefWidth="799.0">
+               <children>
+                  <TableView fx:id="tblItem" layoutX="8.0" layoutY="7.0" prefHeight="263.0" prefWidth="779.0">
+                     <columns>
+                        <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="577.0" text="Item Name" />
+                        <TableColumn fx:id="colQty" prefWidth="126.0" text="QTY" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
