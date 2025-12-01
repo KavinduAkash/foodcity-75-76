@@ -157,4 +157,19 @@ public class CustomerModel {
         return customerList;
     }
     
+    public List<String> getAllCustomerIds() throws SQLException {
+    
+        ResultSet rs = CrudUtil.execute("SELECT id FROM customer");
+        
+        List<String> customerIdList = new ArrayList<>();
+        
+        while(rs.next()) {
+            String id = rs.getString("id");
+            customerIdList.add(id);
+        }
+        
+        return customerIdList;
+        
+    }
+    
 }

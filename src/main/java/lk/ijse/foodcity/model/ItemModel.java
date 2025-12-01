@@ -69,5 +69,19 @@ public class ItemModel {
         }
         return itemList;
     }
+    
+    public List<String> getAllItemIds() throws SQLException {
+    
+        ResultSet rs = CrudUtil.execute("SELECT id FROM item");
+        
+        List<String> itemIdList = new ArrayList<>();
+        
+        while(rs.next()) {
+            itemIdList.add(rs.getString("id"));
+        }
+        
+        return itemIdList;
+        
+    }
 
 }

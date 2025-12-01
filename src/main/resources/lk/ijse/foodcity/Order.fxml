@@ -32,13 +32,13 @@
                   <VBox layoutX="47.0" layoutY="30.0" prefHeight="44.0" prefWidth="153.0">
                      <children>
                         <Label text="Customer ID:" />
-                        <ComboBox prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
+                        <ComboBox fx:id="comboCustomerId" prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
                      </children>
                   </VBox>
                   <VBox layoutX="47.0" layoutY="113.0" prefHeight="44.0" prefWidth="153.0">
                      <children>
                         <Label text="Item ID:" />
-                        <ComboBox prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
+                        <ComboBox fx:id="comboItemId" prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: black; -fx-border-width: 0 0 2px 0;" />
                      </children>
                   </VBox>
                   <VBox layoutX="253.0" layoutY="30.0" prefHeight="44.0" prefWidth="100.0">
