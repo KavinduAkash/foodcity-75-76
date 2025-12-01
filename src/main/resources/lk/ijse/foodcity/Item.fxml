@@ -28,27 +28,35 @@
          <children>
             <Pane prefHeight="270.0" prefWidth="780.0">
                <children>
-                  <VBox layoutX="252.0" layoutY="26.0" prefHeight="40.0" prefWidth="261.0">
+                  <VBox layoutX="129.0" layoutY="7.0" prefHeight="40.0" prefWidth="261.0">
                      <children>
                         <Label text="ID">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="idField" prefHeight="26.0" prefWidth="384.0" />
+                        <TextField fx:id="idField" onKeyPressed="#handleSearchItem" prefHeight="26.0" prefWidth="384.0" />
                      </children>
                   </VBox>
-                  <VBox layoutX="252.0" layoutY="88.0" prefHeight="40.0" prefWidth="261.0">
+                  <VBox layoutX="129.0" layoutY="73.0" prefHeight="40.0" prefWidth="261.0">
                      <children>
                         <Label text="Name">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="384.0" />
+                        <TextField fx:id="nameField" prefHeight="26.0" prefWidth="179.0" />
                      </children>
                   </VBox>
-                  <VBox layoutX="121.0" layoutY="139.0" prefHeight="40.0" prefWidth="261.0" />
+                  <VBox layoutX="129.0" layoutY="135.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="Unit Price">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="priceField" prefHeight="26.0" prefWidth="261.0" />
+                     </children></VBox>
                   <HBox alignment="CENTER" layoutX="122.0" layoutY="201.0" prefHeight="72.0" prefWidth="556.0">
                      <children>
                         <Button mnemonicParsing="false" onAction="#handleSaveItem" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
@@ -85,12 +93,16 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Label layoutX="252.0" layoutY="152.0" text="QTY">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="qtyField" layoutX="252.0" layoutY="178.0" prefHeight="26.0" prefWidth="261.0" />
+                  <VBox layoutX="417.0" layoutY="135.0" prefHeight="40.0" prefWidth="261.0">
+                     <children>
+                        <Label text="QTY">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="qtyField" prefHeight="26.0" prefWidth="261.0" />
+                     </children>
+                  </VBox>
                </children>
             </Pane>
             <Pane prefHeight="285.0" prefWidth="799.0">
@@ -98,8 +110,9 @@
                   <TableView fx:id="tblItem" layoutX="8.0" layoutY="7.0" prefHeight="263.0" prefWidth="779.0">
                      <columns>
                         <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-                        <TableColumn fx:id="colName" prefWidth="577.0" text="Item Name" />
-                        <TableColumn fx:id="colQty" prefWidth="126.0" text="QTY" />
+                        <TableColumn fx:id="colName" prefWidth="347.0" text="Item Name" />
+                        <TableColumn fx:id="colPrice" prefWidth="202.0" text="Unit Price" />
+                        <TableColumn fx:id="colQty" prefWidth="154.0" text="QTY" />
                      </columns>
                   </TableView>
                </children>

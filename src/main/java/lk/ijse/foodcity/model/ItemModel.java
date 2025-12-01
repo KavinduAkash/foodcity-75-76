@@ -11,15 +11,17 @@ public class ItemModel {
     
     public boolean saveItem(ItemDTO itemDTO) throws SQLException {
         return CrudUtil.execute(
-                "INSERT INTO item (name, qty) VALUES(?,?)", 
-                itemDTO.getName(), 
+                "INSERT INTO item (name, unit_price, qty) VALUES(?,?,?)", 
+                itemDTO.getName(),
+                itemDTO.getPrice(),
                 itemDTO.getQty());
     }
     
     public boolean updateItem(ItemDTO itemDTO) throws SQLException {
         return CrudUtil.execute(
-                "UPDATE item SET name=?, qty=? WHERE id=?", 
-                itemDTO.getName(), 
+                "UPDATE item SET name=?, unit_price=?, qty=? WHERE id=?", 
+                itemDTO.getName(),
+                itemDTO.getPrice(),
                 itemDTO.getQty(), 
                 itemDTO.getId());
     }
@@ -42,6 +44,7 @@ public class ItemModel {
             itemDTO = new ItemDTO(
                         rs.getInt("id"),
                         rs.getString("name"),
+                        rs.getDouble("unit_price"),
                         rs.getInt("qty")
                     );
            
@@ -59,6 +62,7 @@ public class ItemModel {
                     new ItemDTO(
                         rs.getInt("id"),
                         rs.getString("name"),
+                        rs.getDouble("unit_price"),
                         rs.getInt("qty")
                     )
             );

@@ -3,19 +3,22 @@ package lk.ijse.foodcity.dto;
 public class ItemDTO {
     private int id;
     private String name;
+    private double price;
     private int qty;
     
     public ItemDTO() {
     }
 
-    public ItemDTO(String name, int qty) {
+    public ItemDTO(String name, double price, int qty) {
         this.name = name;
+        this.price = price;
         this.qty = qty;
     }
 
-    public ItemDTO(int id, String name, int qty) {
+    public ItemDTO(int id, String name, double price, int qty) {
         this.id = id;
         this.name = name;
+        this.price = price;
         this.qty = qty;
     }
 
@@ -35,6 +38,14 @@ public class ItemDTO {
         this.name = name;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
     public int getQty() {
         return qty;
     }
